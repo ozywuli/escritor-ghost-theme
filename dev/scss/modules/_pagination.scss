@@ -1,0 +1,22 @@
+// ==================================================
+// Pagination
+// ==================================================
+
+.pagination {
+  position: relative;
+  @extend .content-col;
+}
+
+
+
+.newer-posts {
+  position: absolute;
+  right: 200px;
+
+}
+.older-posts {
+
+  float: right;
+}
+
+

@@ -1,0 +1,35 @@
+// ==================================================
+// Base
+// ==================================================
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Crimson Text', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #555;
+}
+
+a {
+  text-decoration: none;
+  transition: all 150ms ease;
+  color: #BDB099;
+
+  &:hover {
+    color: lighten(#BDB099, 10%);
+  }
+}
+
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #000;
+}

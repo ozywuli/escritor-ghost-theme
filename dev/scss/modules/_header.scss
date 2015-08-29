@@ -1,0 +1,27 @@
+// ==================================================
+// Header
+// ==================================================
+
+
+.site-header {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: #222 no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.site-header__cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.no-cover {
+  min-height: 160px;
+  max-height: 40vh;
+  background: #F5F8FA;
+}
+

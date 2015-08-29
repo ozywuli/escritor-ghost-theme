@@ -1,0 +1,16 @@
+// ==================================================
+// Footer
+// ==================================================
+
+
+.site-footer {
+  position: relative;
+  margin-top: 40px;
+  border-top: 1px solid #f1f1f1;
+}
+  .site-footer__block {
+    @extend .content-col;
+  }
+  .copyright {
+    margin-bottom: 10px;
+  }
