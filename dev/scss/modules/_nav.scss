@@ -18,7 +18,7 @@
         width: 20px;
         height: 2px;
         background: #000;
-        margin-bottom: 2px;
+        margin-bottom: 4px;
     }
 
 .nav {
@@ -28,7 +28,7 @@
     bottom: 0;
     width: 100%;
     opacity: 0;
-    background: #111;
+    background: url('../img/black_paper.png');
     margin-bottom: 0;
     text-align: left;
     color: #FFF;
@@ -86,3 +86,8 @@
         }
 
     }
+
+.word {
+    position: relative;
+    bottom: 6px;
+}

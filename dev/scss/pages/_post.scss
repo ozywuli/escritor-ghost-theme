@@ -1,3 +1,127 @@
 // ==================================================
 // Post
 // ==================================================
+
+
+
+.posts {
+  @extend .content-col;
+  margin-top: 0;
+}
+
+.post {
+
+  @extend .content-col;
+  margin-bottom: 40px;
+  padding: 20px;
+  @include font-size($p-font-sizes);
+  word-wrap: break-word;
+  background: #FFF;
+
+  box-shadow: 0 1px 2px rgba(50, 50, 50, 0.5);
+
+  a {
+
+    color: #333;
+  }
+
+  p {
+    margin-bottom: 20px;
+
+    line-height: 1.5;
+  }
+
+  .post-template & {
+    padding: 40px;
+  }
+
+
+}
+  .post__anchor {
+    display: block;
+    padding: 20px;
+  }
+  .post__title {
+    margin-bottom: 20px;
+    @include font-size($h3-font-sizes);
+
+    .post-template & {
+      margin-bottom: 0;
+      @include font-size($h2-font-sizes);
+      line-height: 1;
+    }
+  }
+
+  .post__meta {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    color: #9EABB3;
+
+    .post-template & {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .post__content {
+
+
+    h2 {
+      margin-bottom: 1rem;
+      @include font-size($h3-font-sizes);
+    }
+    h3, h4, h5 {
+      margin: 0;
+      font-weight: bold;
+      @include font-size($h4-font-sizes);
+    }
+
+    p {
+      margin-bottom: 3rem;
+    }
+
+    img {
+      display: block;
+      max-width: 126%;
+      height: auto;
+      padding: 1rem 0;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+
+    ul ul, ul ol, ol ul, ol ol {
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      margin-bottom: 3rem;
+      list-style-position: outside;
+    }
+    ul {
+      list-style-type: disc;
+    }
+    ol {
+      list-style-type: decimal;
+    }
+
+    blockquote {
+      margin: 2rem 0 2rem -2.2rem;
+      padding: 0 0 0 2rem;
+      border-left: #4A4A4A 0.2rem solid;
+      font-style: italic;
+    }
+
+    code, tt {
+      padding: 1px 3px;
+      font-family: Inconsolata, monospace, sans-serif;
+      font-size: 0.85em;
+      white-space: pre-wrap;
+      border: #E3EDF3 1px solid;
+      background: #F7FAFB;
+      border-radius: 2px;
+    }
+
+  }

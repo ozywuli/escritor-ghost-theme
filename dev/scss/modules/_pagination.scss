@@ -5,14 +5,14 @@
 .pagination {
   position: relative;
   @extend .content-col;
+  padding: 0;
+  text-align: center;
 }
 
 
 
 .newer-posts {
-  position: absolute;
-  right: 200px;
-
+  float: left;
 }
 .older-posts {
 

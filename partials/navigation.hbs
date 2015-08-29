@@ -8,6 +8,17 @@
             <li class="nav__{{slug}}{{#if current}} nav__current{{/if}}" role="presentation"><a href="{{url absolute="true"}}" class="nav__link">{{label}}</a></li>
         {{/foreach}}
     </ul>
+
+<div class="box sidebox latest-articles">
+  <div class="sidebox-title">Latest Articles</div>
+  <div class="sidebox-content loading">
+    <div class="loader">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </div>
+</div>
+
+
     <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
 </div>
 <span class="nav__cover"></span>
