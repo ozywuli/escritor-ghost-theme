@@ -45,11 +45,11 @@
     }
   }
   .post__title {
-    margin-bottom: 20px;
+
     @include font-size($h3-font-sizes);
 
     .post-template & {
-      margin-bottom: 0;
+
       @include font-size($h2-font-sizes);
       line-height: 1;
     }

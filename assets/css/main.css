@@ -698,6 +698,10 @@ h1, h2, h3, h4, h5 {
   border-radius: 15px;
 }
 
+.page-template .recent-articles__post {
+  color: #000;
+}
+
 .site-header {
   position: relative;
   display: table;
@@ -828,7 +832,6 @@ h1, h2, h3, h4, h5 {
 }
 
 .post__title {
-  margin-bottom: 20px;
   font-size: 2.8rem;
 }
 @media screen and (min-width: 480px) {
@@ -847,7 +850,6 @@ h1, h2, h3, h4, h5 {
   }
 }
 .post-template .post__title {
-  margin-bottom: 0;
   font-size: 4rem;
   line-height: 1;
 }

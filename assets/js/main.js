@@ -381,7 +381,7 @@ function menuClosed() {
 
 var toggleMenu = {
   init: function() {
-    console.log(this);
+
     $menuToggle.click( toggleMenu.toggleMenu );
   },
   toggleMenu: function(e) {
@@ -406,7 +406,7 @@ var bodyClick = {
     );
   },
   closeMenu: function(e) {
-    console.log(e.target);
+
 
     if ( !$menu.is(e.target) && !$menu.find('*').is(e.target) && !$menuToggle.find('*').is(e.target) ) {
       if ($('body').hasClass(menuOpened)) {
@@ -442,18 +442,36 @@ $(function() {
     var $parent = $('.recent-articles__content');
     if(!$parent) {return};
 
-    for(var i = 0; i < Math.min(posts.length, 5); i++) {
-      var p = posts[i];
-      var date = new Date(p.pubDate);
-      var dateStr = date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
-      var $a = $('<li class="recent-articles__item"><a href="' + p.link + '"><div class="date">' + dateStr + '</div><h4 class="recent-articles__post">' + p.title + '</h4></a></li>');
-      if(i == 4) {
-        $a.addClass('last');
+
+    function loopLatestArticles(target, length) {
+
+      length = typeof a !== 'undefined' ? a : posts.length;
+
+      for(var i = 0; i < Math.min(posts.length, length); i++) {
+        var p = posts[i];
+        var date = new Date(p.pubDate);
+        var dateStr = date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
+        var $a = $('<li class="recent-articles__item"><a href="' + p.link + '"><div class="date">' + dateStr + '</div><h4 class="recent-articles__post">' + p.title + '</h4></a></li>');
+        if(i == 4) {
+          $a.addClass('last');
+        }
+        target.append($a);
       }
-      $parent.append($a);
     }
-    
+
+
+    loopLatestArticles($parent, 5);
+    loopLatestArticles($('.archive'));
+
+
+
+
     $parent.removeClass('loading');
+
+
+
+
+
   }
 
   $.ajax({
