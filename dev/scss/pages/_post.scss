@@ -39,7 +39,10 @@
 }
   .post__anchor {
     display: block;
-    padding: 20px;
+    
+    @include respond-to(small) {
+      padding: 20px;
+    }
   }
   .post__title {
     margin-bottom: 20px;
@@ -125,3 +128,8 @@
     }
 
   }
+
+
+#disqus_thread {
+  margin-top: 40px;
+}

@@ -1,3 +1,67 @@
 // ==================================================
 // author
 // ==================================================
+
+.inner-author {
+  display: table;
+  width: 100%;
+  height: 35vh;
+  font-size: 2rem;
+  text-align: center;
+}
+  .inner-author__box {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+.vertical {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.author-template {
+
+  .author__title {
+    @include font-size($h2-font-sizes);
+    margin-bottom: 20px;
+  }
+
+  .author__bio {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .author__meta {
+    font-style: italic;
+    span {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+  .author__location {
+
+  }
+
+  @include respond-to(medium) {
+
+
+    .author__image {
+        float: none;
+    }
+
+
+    .author__meta {
+      span {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+
+
+
+}
+

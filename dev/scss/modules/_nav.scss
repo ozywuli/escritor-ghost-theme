@@ -5,10 +5,17 @@
 .menu-toggle {
     display: block;
     position: fixed;
-    top: 2rem;
+    top: 2.8rem;
     right: 2rem;
     @include z-index("menuToggle");
 }
+    .menu-word {
+        position: relative;
+        bottom: 4px;
+        left: 4px;
+        font-size: 2.2rem
+    }
+
 
 .bars {
     display: inline-block;
@@ -19,6 +26,10 @@
         height: 2px;
         background: #000;
         margin-bottom: 4px;
+
+        .nav--opened & {
+            background: #FFF;
+        }
     }
 
 .nav {
@@ -28,6 +39,7 @@
     bottom: 0;
     width: 100%;
     opacity: 0;
+    visibility: hidden;
     background: url('../img/black_paper.png');
     margin-bottom: 0;
     text-align: left;
@@ -35,7 +47,9 @@
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     overflow-y: auto;
     transition: all 150ms ease;
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(10%, 0, 0);
+
+    overflow-y: auto;
 
     @include z-index("nav");
 
@@ -45,9 +59,10 @@
     }
 
 
-    &--opened {
+    .nav--opened & {
         transform: translate3d(0, 0, 0);
         opacity: 1;
+        visibility: visible;
     }
 
     @include respond-to(small) {
@@ -60,7 +75,7 @@
 }
     .nav__title {
         padding: 20px;
-        @include font-size($h3-font-sizes);
+        @include font-size($h4-font-sizes);
         color: #FFF;
     }
     .nav__link {
@@ -87,7 +102,41 @@
 
     }
 
-.word {
-    position: relative;
-    bottom: 6px;
+
+
+
+
+.recent-articles {
+    
 }
+    .recent-articles__title {
+        @extend .nav__title;
+    }
+    .recent-articles__content {
+        padding: 0 20px 20px 20px;
+    }
+    .recent-articles__item {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+    .recent-articles__post {
+        font-size: 2.4rem;
+        font-weight: 400;
+        color: #FFF;
+    }
+    .date {
+        font-size: 1.2rem;
+        color: #BBB;
+    }
+
+
+
+.subscribe {
+    text-align: center;
+}
+    .nav .subscribe-button {
+        display: inline-block;
+        border: 1px solid #E1E1E1;
+        padding: 10px 20px;
+        border-radius: 15px;
+    }

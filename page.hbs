@@ -6,9 +6,7 @@
 {{! Everything inside the #post tags pulls data from the page }}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-
-</header>
+{{> 'header'}}
 
 <main class="content" role="main">
     <article class="{{post_class}}">

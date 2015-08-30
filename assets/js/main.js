@@ -368,22 +368,31 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 var $menuToggle;
 var menuOpened;
 var $menu = $('.nav');
+var $menuWord = $('.menu-word');
 
 $menuToggle = $('.menu-toggle');
 menuOpened = 'nav--opened';
 
+
+function menuClosed() {
+  $('body').removeClass(menuOpened);
+  $menuWord.text('Menu');
+}
 
 var toggleMenu = {
   init: function() {
     console.log(this);
     $menuToggle.click( toggleMenu.toggleMenu );
   },
-  toggleMenu: function() {
+  toggleMenu: function(e) {
 
-    if ($menu.hasClass(menuOpened)) {
-      $menu.removeClass(menuOpened);
+    e.preventDefault();
+
+    if ($('body').hasClass(menuOpened)) {
+      menuClosed();
     } else {
-      $menu.addClass(menuOpened);
+      $('body').addClass(menuOpened);
+      $menuWord.text('Close');
     }
 
   }
@@ -399,15 +408,17 @@ var bodyClick = {
   closeMenu: function(e) {
     console.log(e.target);
 
-    if ( !$menu.is(e.target) && !$menuToggle.find('*').is(e.target) ) {
-      if ($menu.hasClass(menuOpened)) {
-        console.log(true);
-        $menu.removeClass(menuOpened);
+    if ( !$menu.is(e.target) && !$menu.find('*').is(e.target) && !$menuToggle.find('*').is(e.target) ) {
+      if ($('body').hasClass(menuOpened)) {
+        menuClosed();
       }
     }
 
   }
 }
+
+
+
 
 $(document).ready(function() {
   toggleMenu.init();
@@ -428,14 +439,14 @@ $(function() {
   }
 
   function renderLatestArticles(posts) {
-    var $parent = $('.sidebox.latest-articles .sidebox-content');
+    var $parent = $('.recent-articles__content');
     if(!$parent) {return};
 
     for(var i = 0; i < Math.min(posts.length, 5); i++) {
       var p = posts[i];
       var date = new Date(p.pubDate);
       var dateStr = date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
-      var $a = $('<a href="' + p.link + '"><div class="date">' + dateStr + '</div><div>' + p.title + '</div></a>');
+      var $a = $('<li class="recent-articles__item"><a href="' + p.link + '"><div class="date">' + dateStr + '</div><h4 class="recent-articles__post">' + p.title + '</h4></a></li>');
       if(i == 4) {
         $a.addClass('last');
       }
@@ -1012,40 +1023,3 @@ Prism.languages.insertBefore('bash', 'comment', {
 	'important': /(^#!\s*\/bin\/bash)|(^#!\s*\/bin\/sh)/g
 });
 ;
-
-$(function() {
-
-  var months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'NOV', 'DEC'];
-
-  function renderSite(data) {
-    data = $.xml2json(data);
-    var posts = data.channel.item;
-   
-    renderLatestArticles(posts);
-  }
-
-  function renderLatestArticles(posts) {
-    var $parent = $('.sidebox.latest-articles .sidebox-content');
-    if(!$parent) {return};
-
-    for(var i = 0; i < Math.min(posts.length, 5); i++) {
-      var p = posts[i];
-      var date = new Date(p.pubDate);
-      var dateStr = date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
-      var $a = $('<a href="' + p.link + '"><div class="date">' + dateStr + '</div><div>' + p.title + '</div></a>');
-      if(i == 4) {
-        $a.addClass('last');
-      }
-      $parent.append($a);
-    }
-    
-    $parent.removeClass('loading');
-  }
-
-  $.ajax({
-    dataType: 'xml',
-    url: '/rss',
-    type: 'GET'
-  }).success(renderSite);
-
-});

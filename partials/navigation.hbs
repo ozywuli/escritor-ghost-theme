@@ -9,9 +9,9 @@
         {{/foreach}}
     </ul>
 
-<div class="box sidebox latest-articles">
-  <div class="sidebox-title">Latest Articles</div>
-  <div class="sidebox-content loading">
+<div class="recent-articles">
+  <h3 class="recent-articles__title">Recent Articles</h3>
+  <div class="recent-articles__content loading">
     <div class="loader">
       <i class="fa fa-spinner fa-spin"></i>
     </div>
@@ -19,6 +19,10 @@
 </div>
 
 
-    <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
+    <div class="subscribe">
+      <a class="subscribe-button" href="{{@blog.url}}/rss/">Subscribe</a>
+    </div>
+    
+
 </div>
 <span class="nav__cover"></span>
