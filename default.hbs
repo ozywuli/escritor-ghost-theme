@@ -24,39 +24,39 @@
 </head>
 <body class="{{body_class}}">
 
+
+    {{#if @blog.navigation}}
+        <a class="menu-toggle icon-menu" href="#">
+            <div class="bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <span class="menu-word">Menu</span>
+        </a>
+    {{/if}}
+
+
     {{navigation}}
 
     <div class="site-wrapper">
 
 
-
-
-        {{#if @blog.navigation}}
-            <a class="menu-toggle icon-menu" href="#">
-                <div class="bars">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-                <span class="menu-word">Menu</span>
-            </a>
-        {{/if}}
-
         {{! Everything else gets inserted here }}
         {{{body}}}
 
-
-        {{!-- Footer --}}
-        <footer class="site-footer clearfix">
-            <section class="site-footer__block">
-                <div class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} | Proudly published with <a href="https://ghost.org">Ghost</a></div>
-                <div class="madeby">Made by <a href="http://ozywuli.com">Ozy Wu-Li</a></div>
-
-
-            </section>
-        </footer>
-
     </div>
+
+
+    {{!-- Footer --}}
+    <footer class="site-footer clearfix">
+        <section class="site-footer__block">
+            <div class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} | Proudly published with <a href="https://ghost.org">Ghost</a></div>
+            <div class="madeby">Made by <a href="http://ozywuli.com">Ozy Wu-Li</a></div>
+
+
+        </section>
+    </footer>
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}

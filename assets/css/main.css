@@ -519,7 +519,8 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  line-height: 1;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #000;
@@ -538,77 +539,18 @@ h1, h2, h3, h4, h5 {
   min-height: 100%;
   background: #FFF;
   background: url("../img/paper_fibers.png");
+  margin-bottom: -161px;
+}
+.site-wrapper:after {
+  content: '';
+  display: block;
+  height: 161px;
 }
 
 .content {
   position: relative;
   box-shadow: 0px -10px 14px -16px #333;
   padding-top: 20px;
-}
-
-.author-thumb {
-  width: 24px;
-  height: 24px;
-  float: left;
-  margin-right: 9px;
-  border-radius: 100%;
-}
-
-.share {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.icon-share {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-.post__author, .inner__author {
-  position: relative;
-  background: #f1f1f1;
-  padding: 2rem;
-}
-
-.author__image {
-  display: block;
-  margin: 0 auto;
-  width: 125px;
-  height: 125px;
-  border-radius: 100%;
-  overflow: hidden;
-  padding: 6px;
-  z-index: 2;
-}
-.author__image .img {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  border-radius: 100%;
-  border: 5px solid #F3F3F3;
-  box-shadow: 1px 1px 2px #666;
-}
-@media (min-width: 800px) {
-  .author__image {
-    float: left;
-    width: 20%;
-    max-width: 125px;
-  }
-}
-
-.author__bio {
-  float: left;
-}
-@media (min-width: 800px) {
-  .author__bio {
-    width: 80%;
-    padding-left: 2rem;
-  }
 }
 
 .menu-toggle {
@@ -740,6 +682,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .date {
+  margin-bottom: 5px;
   font-size: 1.2rem;
   color: #BBB;
 }
@@ -763,6 +706,7 @@ h1, h2, h3, h4, h5 {
   text-align: center;
   background: #222 no-repeat center center;
   background-size: cover;
+  padding: 20px;
   overflow: hidden;
 }
 
@@ -794,6 +738,7 @@ h1, h2, h3, h4, h5 {
 .blog-logo-img {
   width: 150px;
   height: 150px;
+  margin-bottom: 20px;
   border: 1px solid #FFF;
   border-radius: 50%;
   padding: 2px;
@@ -824,7 +769,6 @@ h1, h2, h3, h4, h5 {
 
 .site-footer {
   position: relative;
-  margin-top: 40px;
   border-top: 1px solid #f1f1f1;
   background: #FFF;
 }
@@ -935,7 +879,6 @@ h1, h2, h3, h4, h5 {
 }
 
 .post__content h2 {
-  margin-bottom: 1rem;
   font-size: 2.8rem;
 }
 @media screen and (min-width: 480px) {
@@ -953,25 +896,27 @@ h1, h2, h3, h4, h5 {
     font-size: 3.6rem;
   }
 }
-.post__content h3, .post__content h4, .post__content h5 {
-  margin: 0;
+.post__content h3 {
   font-weight: bold;
   font-size: 2.2rem;
 }
 @media screen and (min-width: 480px) {
-  .post__content h3, .post__content h4, .post__content h5 {
+  .post__content h3 {
     font-size: 2.2rem;
   }
 }
 @media screen and (min-width: 800px) {
-  .post__content h3, .post__content h4, .post__content h5 {
+  .post__content h3 {
     font-size: 2.6rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .post__content h3, .post__content h4, .post__content h5 {
+  .post__content h3 {
     font-size: 3rem;
   }
+}
+.post__content h4 {
+  font-weight: 400;
 }
 .post__content p {
   margin-bottom: 3rem;
@@ -1014,6 +959,70 @@ h1, h2, h3, h4, h5 {
   border: #E3EDF3 1px solid;
   background: #F7FAFB;
   border-radius: 2px;
+}
+
+.author-thumb {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-right: 9px;
+  border-radius: 100%;
+}
+
+.share {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.icon-share {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.post__author, .inner__author {
+  position: relative;
+  background: #f1f1f1;
+  padding: 2rem;
+}
+
+.author__image {
+  display: block;
+  margin: 0 auto;
+  width: 125px;
+  height: 125px;
+  border-radius: 100%;
+  overflow: hidden;
+  padding: 6px;
+  z-index: 2;
+}
+.author__image .img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 100%;
+  box-shadow: 1px 1px 2px #666;
+}
+@media (min-width: 800px) {
+  .author__image {
+    float: left;
+    width: 22%;
+    max-width: 125px;
+  }
+}
+
+.author__bio {
+  float: left;
+}
+@media (min-width: 800px) {
+  .author__bio {
+    width: 78%;
+    padding-left: 2rem;
+  }
 }
 
 #disqus_thread {
