@@ -13,26 +13,27 @@
 
   @extend .content-col;
   margin-bottom: 40px;
-  padding: 20px;
   @include font-size($p-font-sizes);
   word-wrap: break-word;
   background: #FFF;
-
+  padding: 0;
   box-shadow: 0 1px 2px rgba(50, 50, 50, 0.5);
+  transition: all 150ms ease;
 
-  a {
-
-    color: #333;
-  }
 
   p {
     margin-bottom: 20px;
-
     line-height: 1.5;
+    color: #333;
   }
 
   .post-template & {
     padding: 40px;
+  }
+
+
+  &:hover {
+    box-shadow: 0 1px 6px rgba(50, 50, 50, 0.5);
   }
 
 
@@ -41,7 +42,7 @@
     display: block;
     
     @include respond-to(small) {
-      padding: 20px;
+      padding: 40px;
     }
   }
   .post__title {

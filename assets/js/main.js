@@ -445,7 +445,7 @@ $(function() {
 
     function loopLatestArticles(target, length) {
 
-      length = typeof a !== 'undefined' ? a : posts.length;
+      length = typeof length !== 'undefined' ? length : posts.length;
 
       for(var i = 0; i < Math.min(posts.length, length); i++) {
         var p = posts[i];

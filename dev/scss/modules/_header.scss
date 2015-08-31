@@ -39,6 +39,8 @@
   background: #F5F8FA;
 }
 
+
+
 .blog-logo-img {
   width: 150px;
   height: 150px;
@@ -46,6 +48,11 @@
   border: 1px solid #FFF;
   border-radius: 50%;
   padding: 2px;
+
+  &:hover {
+    border: 1px solid #D1C8B8;
+  }
+
 }
 
 .page-header {
