@@ -420,6 +420,24 @@ var bodyClick = {
 
 
 
+
+$(window).scroll(function() {
+
+  var $headerHeight = $('.site-header').outerHeight();
+  var scrolled = $(this).scrollTop();
+
+  if (scrolled > $headerHeight) {
+    $menuToggle.addClass('menu-toggle--active');
+  } else {
+    $menuToggle.removeClass('menu-toggle--active');
+  }
+
+
+});
+
+
+
+
 $(document).ready(function() {
   toggleMenu.init();
   bodyClick.init();

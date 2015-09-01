@@ -8,12 +8,15 @@
     top: 2.8rem;
     right: 2rem;
     @include z-index("menuToggle");
+    font-family: $sans-serif;
+    color: #FFF;
+    text-transform: uppercase;
 }
     .menu-word {
         position: relative;
         bottom: 4px;
         left: 4px;
-        font-size: 2.2rem
+        font-size: 2rem
     }
 
 
@@ -24,12 +27,15 @@
         display: block;
         width: 20px;
         height: 2px;
-        background: #000;
+        background: #FFF;
         margin-bottom: 4px;
+        transition: all 150ms ease;
 
-        .nav--opened & {
-            background: #FFF;
+        .menu-toggle:hover & {
+            background: $gold-hover;
         }
+
+
     }
 
 .nav {
@@ -44,7 +50,7 @@
     margin-bottom: 0;
     text-align: left;
     color: #FFF;
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-family: $sans-serif;
     overflow-y: auto;
     transition: all 150ms ease;
     transform: translate3d(10%, 0, 0);

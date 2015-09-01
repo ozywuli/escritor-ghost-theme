@@ -498,7 +498,7 @@ table {
 }
 
 html {
-  font-family: 'Crimson Text', sans-serif;
+  font-family: "Crimson Text", Georgia, sans-serif;
   font-size: 62.5%;
 }
 
@@ -521,7 +521,7 @@ a:hover {
 h1, h2, h3, h4, h5 {
   margin-bottom: 20px;
   line-height: 1;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #000;
 }
@@ -559,13 +559,16 @@ h1, h2, h3, h4, h5 {
   top: 2.8rem;
   right: 2rem;
   z-index: 20;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  color: #FFF;
+  text-transform: uppercase;
 }
 
 .menu-word {
   position: relative;
   bottom: 4px;
   left: 4px;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .bars {
@@ -576,11 +579,13 @@ h1, h2, h3, h4, h5 {
   display: block;
   width: 20px;
   height: 2px;
-  background: #000;
-  margin-bottom: 4px;
-}
-.nav--opened .bar {
   background: #FFF;
+  margin-bottom: 4px;
+  -webkit-transition: all 150ms ease;
+          transition: all 150ms ease;
+}
+.menu-toggle:hover .bar {
+  background: #D1C8B8;
 }
 
 .nav {
@@ -595,7 +600,7 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 0;
   text-align: left;
   color: #FFF;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   overflow-y: auto;
   -webkit-transition: all 150ms ease;
           transition: all 150ms ease;
