@@ -18,9 +18,9 @@
                 <h2 class="author__bio">{{bio}}</h2>
             {{/if}}
             <div class="author__meta">
-                {{#if location}}<span class="author__location">{{location}}</span>{{/if}}
-                {{#if website}}<span class="author__link"><a href="{{website}}">{{website}}</a></span>{{/if}}
-                <span class="author__stats"><i class="icon-stats"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+                {{#if location}}<span class="author__location">{{> pin }}{{location}}</span>{{/if}}
+                {{#if website}}<span class="author__link"><a href="{{website}}">{{> link}}{{website}}</a></span>{{/if}}
+                <span class="author__stats"><i class="icon-stats"></i><div class="pound">#</div>{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
             </div>
         </div>
     </div>

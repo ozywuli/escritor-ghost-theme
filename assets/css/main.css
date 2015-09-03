@@ -526,6 +526,32 @@ h1, h2, h3, h4, h5 {
   color: #000;
 }
 
+.browser-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/paper_fibers.png");
+  padding: 100px;
+  text-align: center;
+  color: #000;
+  z-index: 999999;
+  font-size: 30px;
+  line-height: 1.5;
+}
+.browser-overlay a {
+  color: #000;
+}
+.browser-overlay p a {
+  color: #BDB099;
+}
+.browser-overlay p a:hover {
+  color: #D1C8B8;
+}
+
 .content-col, .pagination, .site-footer__block, .posts, .post {
   position: relative;
   width: 100%;
@@ -1059,6 +1085,7 @@ h1, h2, h3, h4, h5 {
 .inner-author__box {
   max-width: 600px;
   margin: 0 auto;
+  padding: 40px 0;
 }
 
 .vertical {
@@ -1098,12 +1125,31 @@ h1, h2, h3, h4, h5 {
   display: block;
   margin-bottom: 5px;
 }
+.author-template .author__location svg {
+  width: 12px;
+  height: 18px;
+  margin-bottom: -2px;
+  margin-right: 5px;
+}
+.author-template .author__link svg {
+  width: 18px;
+  margin-bottom: -5px;
+  fill: #BDB099;
+}
+.author-template .author__link:hover svg {
+  fill: #D1C8B8;
+}
+.author-template .pound {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 2.8rem;
+}
 @media (min-width: 800px) {
   .author-template .author__image {
     float: none;
   }
   .author-template .author__meta span {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 15px;
   }
 }
