@@ -1,0 +1,46 @@
+// ==================================================
+// Layout
+// ==================================================
+
+
+.content-col {
+  position: relative;
+  width: 100%;
+  max-width: 710px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+
+.site-wrapper {
+  position: relative;
+  min-height: 100%;
+  background: #FFF;
+  background: url('../img/paper_fibers.png');
+  margin-bottom: -161px;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 161px;
+  }
+}
+
+
+
+.content {
+  position: relative;
+  box-shadow: 0px -10px 14px -16px #333;
+
+  padding: 20px 20px 0 20px;
+
+  @include respond-to(medium) {
+    padding: 20px 40px 0 40px;
+  }
+
+}
+
+
+
+
+
