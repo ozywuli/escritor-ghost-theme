@@ -576,7 +576,7 @@ h1, h2, h3, h4, h5 {
 .content {
   position: relative;
   box-shadow: 0px -10px 14px -16px #333;
-  padding-top: 20px;
+  padding: 20px 40px 0 40px;
 }
 
 .menu-toggle {
@@ -811,6 +811,33 @@ h1, h2, h3, h4, h5 {
   float: right;
 }
 
+.read-next {
+  padding: 0 40px 40px 40px;
+  font-size: 0;
+}
+.read-next .post {
+  margin: 0;
+  margin-bottom: 20px;
+}
+@media (min-width: 800px) {
+  .read-next {
+    margin: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .read-next-story {
+    display: inline-block;
+    width: calc(50% - 10px);
+    vertical-align: top;
+  }
+  .read-next-story:nth-of-type(1) {
+    margin-right: 10px;
+  }
+  .read-next-story:nth-of-type(2) {
+    margin-left: 10px;
+  }
+}
 .site-footer {
   position: relative;
   border-top: 1px solid #f1f1f1;
@@ -823,6 +850,7 @@ h1, h2, h3, h4, h5 {
 
 .posts {
   margin-top: 0;
+  padding: 0;
 }
 
 .post {
