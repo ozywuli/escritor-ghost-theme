@@ -525,6 +525,12 @@ h1, h2, h3, h4, h5 {
   color: #000;
 }
 
+iframe {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
 /* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
@@ -1023,6 +1029,9 @@ pre[class*="language-"] {
 .post:hover {
   box-shadow: 0 1px 6px rgba(50, 50, 50, 0.5);
 }
+.post-template .post:hover {
+  box-shadow: 0 1px 2px rgba(50, 50, 50, 0.5);
+}
 
 .post__anchor {
   display: block;
@@ -1082,6 +1091,9 @@ pre[class*="language-"] {
   margin-bottom: 4rem;
 }
 
+.post__content {
+  width: 100%;
+}
 .post__content h2 {
   font-size: 2.8rem;
 }
@@ -1171,6 +1183,14 @@ pre[class*="language-"] {
   width: 100%;
   text-align: center;
   margin-bottom: 3rem;
+}
+.share:before {
+  content: " ";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #E1E1E1;
+  margin: 40px auto;
 }
 
 .icon-share {

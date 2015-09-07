@@ -76,6 +76,10 @@ $(window).scroll(function() {
 $(document).ready(function() {
   toggleMenu.init();
   bodyClick.init();
+
+  var $postContent = $(".post__content");
+  $postContent.fitVids();
+
 });
 
 
