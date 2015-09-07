@@ -510,8 +510,7 @@ body {
 
 a {
   text-decoration: none;
-  -webkit-transition: all 150ms ease;
-          transition: all 150ms ease;
+  transition: all 150ms ease;
   color: #BDB099;
 }
 a:hover {
@@ -519,11 +518,145 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   line-height: 1;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #000;
+}
+
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+.token.function {
+  color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
 }
 
 .browser-overlay {
@@ -552,7 +685,7 @@ h1, h2, h3, h4, h5 {
   color: #D1C8B8;
 }
 
-.content-col, .pagination, .site-footer__block, .posts, .post {
+.content-col, .pagination, .read-next, .site-footer__block, .posts, .post {
   position: relative;
   width: 100%;
   max-width: 710px;
@@ -612,8 +745,7 @@ h1, h2, h3, h4, h5 {
   height: 2px;
   background: #FFF;
   margin-bottom: 4px;
-  -webkit-transition: all 150ms ease;
-          transition: all 150ms ease;
+  transition: all 150ms ease;
 }
 .menu-toggle:hover .bar {
   background: #D1C8B8;
@@ -633,8 +765,7 @@ h1, h2, h3, h4, h5 {
   color: #FFF;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   overflow-y: auto;
-  -webkit-transition: all 150ms ease;
-          transition: all 150ms ease;
+  transition: all 150ms ease;
   -webkit-transform: translate3d(10%, 0, 0);
           transform: translate3d(10%, 0, 0);
   overflow-y: auto;
@@ -695,8 +826,7 @@ h1, h2, h3, h4, h5 {
   height: 1px;
   background: #333;
   margin: 10px 0;
-  -webkit-transition: all 150ms ease;
-          transition: all 150ms ease;
+  transition: all 150ms ease;
 }
 .nav__link:hover:after {
   background: #FFF;
@@ -817,29 +947,26 @@ h1, h2, h3, h4, h5 {
 }
 
 .read-next {
-  padding: 0 40px 40px 40px;
-  font-size: 0;
+  margin-top: 0;
+  padding: 0;
 }
 .read-next .post {
-  margin: 0;
-  margin-bottom: 20px;
-}
-@media (min-width: 800px) {
-  .read-next {
-    margin: 0;
-  }
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 @media (min-width: 800px) {
   .read-next-story {
-    display: inline-block;
+    display: block;
     width: calc(50% - 10px);
     vertical-align: top;
   }
   .read-next-story:nth-of-type(1) {
+    float: left;
     margin-right: 10px;
   }
   .read-next-story:nth-of-type(2) {
+    float: right;
     margin-left: 10px;
   }
 }
@@ -866,8 +993,7 @@ h1, h2, h3, h4, h5 {
   background: #FFF;
   padding: 0;
   box-shadow: 0 1px 2px rgba(50, 50, 50, 0.5);
-  -webkit-transition: all 150ms ease;
-          transition: all 150ms ease;
+  transition: all 150ms ease;
 }
 @media screen and (min-width: 480px) {
   .post {
@@ -994,7 +1120,7 @@ h1, h2, h3, h4, h5 {
   }
 }
 .post__content h4 {
-  font-weight: 400;
+  font-weight: bold;
 }
 .post__content p {
   margin-bottom: 3rem;
@@ -1007,7 +1133,6 @@ h1, h2, h3, h4, h5 {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 .post__content ul ul, .post__content ul ol, .post__content ol ul, .post__content ol ol {
@@ -1029,14 +1154,8 @@ h1, h2, h3, h4, h5 {
   border-left: #4A4A4A 0.2rem solid;
   font-style: italic;
 }
-.post__content code, .post__content tt {
-  padding: 1px 3px;
-  font-family: Inconsolata, monospace, sans-serif;
-  font-size: 0.85em;
-  white-space: pre-wrap;
-  border: #E3EDF3 1px solid;
-  background: #F7FAFB;
-  border-radius: 2px;
+.post__content pre {
+  margin-bottom: 20px;
 }
 
 .author-thumb {
@@ -1070,6 +1189,7 @@ h1, h2, h3, h4, h5 {
   margin: 0 auto;
   width: 125px;
   height: 125px;
+  margin-bottom: 20px;
   border-radius: 100%;
   overflow: hidden;
   padding: 6px;
@@ -1090,6 +1210,7 @@ h1, h2, h3, h4, h5 {
     float: left;
     width: 22%;
     max-width: 125px;
+    margin-bottom: 0;
   }
 }
 

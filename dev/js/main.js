@@ -137,5 +137,18 @@ $(function() {
 
 
 
+// Remove margin from p if it contains a br tag
+
+$('p').each(function(){
+  if ($(this).html() === "<br>") {
+    $(this).css({
+      'margin': '0',
+      'height': '5px'
+    });
+  }
+});
+
+
+
 
 })(jQuery);

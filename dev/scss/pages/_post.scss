@@ -83,7 +83,7 @@
     }
 
     h4 {
-      font-weight: 400;
+      font-weight: bold;
     }
 
     p {
@@ -123,14 +123,8 @@
       font-style: italic;
     }
 
-    code, tt {
-      padding: 1px 3px;
-      font-family: Inconsolata, monospace, sans-serif;
-      font-size: 0.85em;
-      white-space: pre-wrap;
-      border: #E3EDF3 1px solid;
-      background: #F7FAFB;
-      border-radius: 2px;
+    pre {
+      margin-bottom: 20px;
     }
 
   }
@@ -174,6 +168,7 @@
     margin: 0 auto;
     width: 125px;
     height: 125px;
+    margin-bottom: 20px;
     border-radius: 100%;
     overflow: hidden;
     padding: 6px;
@@ -195,6 +190,7 @@
     float: left;
     width: 22%;
     max-width: 125px;
+    margin-bottom: 0;
   }
 
 }
