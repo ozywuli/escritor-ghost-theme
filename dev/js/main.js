@@ -21,6 +21,8 @@ var toggleMenu = {
   },
   toggleMenu: function(e) {
 
+    console.log(e.target);
+
     e.preventDefault();
 
     if ($('body').hasClass(menuOpened)) {
@@ -28,6 +30,8 @@ var toggleMenu = {
     } else {
       $('body').addClass(menuOpened);
       $menuWord.text('Close');
+      $menuToggle.removeClass('menu-toggle--post');
+      $('.bar').removeClass('bar--post');
     }
 
   }
@@ -43,8 +47,9 @@ var bodyClick = {
   closeMenu: function(e) {
 
 
-    if ( !$menu.is(e.target) && !$menu.find('*').is(e.target) && !$menuToggle.find('*').is(e.target) ) {
+    if ( !$menu.is(e.target) && !$menu.find('*').is(e.target) && !$menuToggle.is(e.target) && !$menuToggle.find('*').is(e.target) ) {
       if ($('body').hasClass(menuOpened)) {
+        console.log(1);
         menuClosed();
       }
     }

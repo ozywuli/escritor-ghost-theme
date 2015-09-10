@@ -22,17 +22,24 @@
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
+
+
+{{#if post}}
+<body class="{{body_class}} menu-toggle--posts">
+{{else}}
 <body class="{{body_class}}">
+{{/if}}
+
 
     {{> browserupgrade}}
 
 
     {{#if @blog.navigation}}
-        <a class="menu-toggle icon-menu" href="#">
+        <a class="menu-toggle menu-toggle--post icon-menu" href="#">
             <div class="bars">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+                <div class="bar bar--post"></div>
+                <div class="bar bar--post"></div>
+                <div class="bar bar--post"></div>
             </div>
             <span class="menu-word">Menu</span>
         </a>
@@ -63,7 +70,7 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+
     {{! The main JavaScript file for Steinbeckr }}
     <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
 
