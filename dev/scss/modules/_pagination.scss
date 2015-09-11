@@ -33,6 +33,20 @@
 
 }
 
+.read-next-story:before {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.prev:before {
+  content: 'Previous Post';
+
+}
+.next:before {
+  content: 'Next Post';
+}
+
 
 @include respond-to(medium) {
 

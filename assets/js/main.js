@@ -414,17 +414,17 @@ $(function() {
 
 // Remove margin from p if it contains a br tag
 
-$('p').each(function(){
+/*$('p').each(function(){
   if ($(this).html() === "<br>") {
     $(this).css({
       'margin': '0',
       'height': '5px'
     });
   }
-});
+});*/
 
 
-
+// $('p br:only-child').parent().addClass('break');
 
 })(jQuery);
 /* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */

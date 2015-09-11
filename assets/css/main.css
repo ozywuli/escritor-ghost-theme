@@ -531,6 +531,14 @@ iframe {
   margin-bottom: 20px;
 }
 
+pre {
+  font-size: 1.5rem;
+}
+
+/* .break {
+  margin: 0 !important;
+  height: 0 !important;
+} */
 /* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
@@ -973,6 +981,21 @@ pre[class*="language-"] {
 .read-next .post {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.read-next-story:before {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.prev:before {
+  content: 'Previous Post';
+}
+
+.next:before {
+  content: 'Next Post';
 }
 
 @media (min-width: 800px) {
