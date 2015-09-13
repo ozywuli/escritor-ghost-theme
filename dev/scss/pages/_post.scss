@@ -44,6 +44,7 @@
 }
   .post__anchor {
     display: block;
+    padding: 20px;
     
     @include respond-to(small) {
       padding: 40px;
@@ -68,8 +69,13 @@
     color: #9EABB3;
 
     .post-template & {
-      margin-bottom: 4rem;
+      margin-bottom: 15px;
     }
+  }
+
+  .post__img {
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .post__content {
@@ -166,6 +172,16 @@
   .icon-share {
     display: inline-block;
     margin-right: 1rem;
+
+    svg {
+      transition: all 150ms ease;
+    }
+
+    &:hover {
+      svg {
+        fill: $gold-hover;
+      }
+    }
   }
 
 

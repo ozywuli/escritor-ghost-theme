@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    del = require('del'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
@@ -9,16 +10,11 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
-    livereload = require('gulp-livereload'),
-    del = require('del');
+    plumber = require('gulp-plumber'),
+    cmq = require('gulp-combine-media-queries');
 
 
 
-// Swallows errors
-var plumber = require('gulp-plumber');
-
-// Combine media queries
-var cmq = require('gulp-combine-media-queries');
 
 
 
@@ -60,9 +56,14 @@ gulp.task('img', function() {
 });
 
 
-gulp.task('clean', function(cb) {
-    del(['assets/css', 'assets/js', 'assets/img'], cb)
+
+
+gulp.task('clean', function() {
+    del(['assets/css', 'assets/js', 'assets/img'])
 });
+
+
+
 
 gulp.task('default', ['clean'], function() {
     gulp.start('css', 'js', 'img');
@@ -79,15 +80,9 @@ gulp.task('watch', function() {
   // Watch image files
   gulp.watch('dev/img/*', ['img']);
 
+
+
+
+
 });
 
-/*
-gulp.task('watch', function() {
-
-  // Create LiveReload server
-  livereload.listen();
-
-  // Watch any files in dist/, reload on change
-  gulp.watch(['dist/**']).on('change', livereload.changed);
-
-});*/

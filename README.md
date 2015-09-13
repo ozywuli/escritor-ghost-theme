@@ -15,4 +15,9 @@ Key Features
 - Recent articles in sidebar
 - Helper Classes
 
+
+```javascript
+npm install del gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-uglify gulp-imagemin gulp-rename gulp-concat gulp-notify gulp-cache gulp-livereload del gulp-plumber gulp-combine-media-queries
+```
+
 Supports IE10+, Firefox, Chrome, Safari

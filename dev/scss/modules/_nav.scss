@@ -5,12 +5,29 @@
 .menu-toggle {
     display: block;
     position: fixed;
-    top: 2.8rem;
+    top: 2rem;
     right: 2rem;
     @include z-index("menuToggle");
     font-family: $sans-serif;
     color: #FFF;
     text-transform: uppercase;
+
+    color: #000;
+    background: #FFF;
+    padding: 10px 14px 4px 10px;
+    box-shadow: 0 0px 1px 0px rgba(80, 80, 80, 0.2);
+
+
+
+    .nav--opened & {
+        background: none;
+        box-shadow: none;
+        color: #FFF;
+
+        &:hover {
+            color: $gold-hover;
+        }
+    }
 
 }
     .menu-word {
@@ -19,16 +36,7 @@
         left: 4px;
         font-size: 2rem
     }
-    .post-template .menu-toggle--post {
-        color: #000;
-        background: #FFF;
-        padding: 10px;
-        box-shadow: 0 1px 2px rgba(50, 50, 50, 0.5);
 
-        &:hover {
-            color: $gold-hover;
-        }
-    }
 
 
 .bars {
@@ -38,18 +46,20 @@
         display: block;
         width: 20px;
         height: 2px;
-        background: #FFF;
+        background: #000;
         margin-bottom: 4px;
         transition: all 150ms ease;
 
         .menu-toggle:hover & {
             background: $gold-hover;
         }
+
+        .nav--opened & {
+            background: #FFF;
+        }
     }
 
-    .post-template .bar--post {
-        background: #000;
-    }
+
 
 .nav {
     position: fixed;
