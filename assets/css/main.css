@@ -919,7 +919,7 @@ pre[class*="language-"] {
   text-align: center;
   background: #222 no-repeat center center;
   background-size: cover;
-  padding: 20px;
+  padding: 40px 20px;
   overflow: hidden;
 }
 
