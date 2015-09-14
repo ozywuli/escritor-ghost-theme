@@ -5,8 +5,9 @@
 .menu-toggle {
     display: block;
     position: fixed;
-    top: 2rem;
-    right: 2rem;
+    top: 5px;
+    right: 5px;
+    border-radius: 3px;
     @include z-index("menuToggle");
     font-family: $sans-serif;
     color: #FFF;
@@ -15,7 +16,7 @@
     color: #000;
     background: #FFF;
     padding: 10px 14px 4px 10px;
-    box-shadow: 0 0px 1px 0px rgba(80, 80, 80, 0.2);
+    box-shadow: 0 0px 1px 0px rgba(80, 80, 80, 0.8);
 
 
 
@@ -28,6 +29,12 @@
             color: $gold-hover;
         }
     }
+
+    @include respond-to(small) {
+        top: 20px;
+        right: 20px;
+    }
+
 
 }
     .menu-word {
@@ -110,6 +117,7 @@
         padding: 20px;
         @include font-size($h4-font-sizes);
         color: #FFF;
+        font-weight: 100;
     }
     .nav__link {
         padding: 10px 20px;
@@ -144,6 +152,7 @@
 }
     .recent-articles__title {
         @extend .nav__title;
+        font-weight: 100;
     }
     .recent-articles__content {
         padding: 0 20px 20px 20px;

@@ -27,11 +27,22 @@
 
   .post {
     margin-top: 0;
-    margin-bottom: 0
+    margin-bottom: 0;
+
+    &:hover {
+      box-shadow: 0 1px 6px rgba(50, 50, 50, 0.5);
+    }
+
+  }
+
+  p {
+    font-size: 1.8rem;
   }
 
 
 }
+
+
 
 .read-next-story:before {
   display: block;

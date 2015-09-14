@@ -535,10 +535,6 @@ pre {
   font-size: 1.5rem;
 }
 
-/* .break {
-  margin: 0 !important;
-  height: 0 !important;
-} */
 /* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
@@ -734,8 +730,9 @@ pre[class*="language-"] {
 .menu-toggle {
   display: block;
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 5px;
+  right: 5px;
+  border-radius: 3px;
   z-index: 20;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   color: #FFF;
@@ -743,7 +740,7 @@ pre[class*="language-"] {
   color: #000;
   background: #FFF;
   padding: 10px 14px 4px 10px;
-  box-shadow: 0 0px 1px 0px rgba(80, 80, 80, 0.2);
+  box-shadow: 0 0px 1px 0px rgba(80, 80, 80, 0.8);
 }
 .nav--opened .menu-toggle {
   background: none;
@@ -752,6 +749,12 @@ pre[class*="language-"] {
 }
 .nav--opened .menu-toggle:hover {
   color: #D1C8B8;
+}
+@media (min-width: 480px) {
+  .menu-toggle {
+    top: 20px;
+    right: 20px;
+  }
 }
 
 .menu-word {
@@ -828,6 +831,7 @@ pre[class*="language-"] {
   padding: 20px;
   font-size: 2.2rem;
   color: #FFF;
+  font-weight: 100;
 }
 @media screen and (min-width: 480px) {
   .nav__title, .recent-articles__title {
@@ -859,6 +863,10 @@ pre[class*="language-"] {
 }
 .nav__link:hover:after {
   background: #FFF;
+}
+
+.recent-articles__title {
+  font-weight: 100;
 }
 
 .recent-articles__content {
@@ -983,6 +991,12 @@ pre[class*="language-"] {
   margin-top: 0;
   margin-bottom: 0;
 }
+.read-next .post:hover {
+  box-shadow: 0 1px 6px rgba(50, 50, 50, 0.5);
+}
+.read-next p {
+  font-size: 1.8rem;
+}
 
 .read-next-story:before {
   display: block;
@@ -1067,13 +1081,17 @@ pre[class*="language-"] {
 .post:hover {
   box-shadow: 0 1px 6px rgba(50, 50, 50, 0.5);
 }
-.post-template .post:hover {
+.post-template .content .post:hover {
   box-shadow: 0 1px 2px rgba(50, 50, 50, 0.5);
 }
 
 .post__anchor {
   display: block;
   padding: 20px;
+  color: #333;
+}
+.post__anchor:hover {
+  color: #333;
 }
 @media (min-width: 480px) {
   .post__anchor {
@@ -1127,7 +1145,7 @@ pre[class*="language-"] {
   color: #9EABB3;
 }
 .post-template .post__meta {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .post__img {
@@ -1208,10 +1226,31 @@ pre[class*="language-"] {
   margin: 2rem 0 2rem -2.2rem;
   padding: 0 0 0 2rem;
   border-left: #4A4A4A 0.2rem solid;
+  font-size: 2.2rem;
   font-style: italic;
+  font-weight: bold;
+}
+@media screen and (min-width: 480px) {
+  .post__content blockquote {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .post__content blockquote {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .post__content blockquote {
+    font-size: 3rem;
+  }
 }
 .post__content pre {
   margin-bottom: 20px;
+}
+
+.tags {
+  margin-top: 40px;
 }
 
 .author-thumb {

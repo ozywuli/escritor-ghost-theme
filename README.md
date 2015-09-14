@@ -13,11 +13,35 @@ Key Features
 - Responsive video embeds
 - Archive page
 - Recent articles in sidebar
-- Helper Classes
 
 
-```javascript
-npm install del gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-uglify gulp-imagemin gulp-rename gulp-concat gulp-notify gulp-cache gulp-livereload del gulp-plumber gulp-combine-media-queries
+# INSTALLATION AND CUSTOMIZATION
+
+You'll need node, npm, and gulp installed
+
++ http://nodejs.org/
++ https://www.npmjs.com/
++ http://gulpjs.com
+
+After which you should follow instructions below:
+
+```bash
+// clone the repository into your local folder
+git clone https://github.com/ozywuli/steinbeck
+// navigate to the cloned repository
+cd steinbeck
+// install the necessary gulp plugins
+npm install del gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-uglify gulp-imagemin gulp-rename gulp-concat gulp-notify gulp-cache gulp-livereload del gulp-plumber gulp-combine-media-queries --save-dev
+// build the theme
+gulp
 ```
 
-Supports IE10+, Firefox, Chrome, Safari
+Gulp will build all the necessary assets located in the dev directory and place them into the build directory. To watch for changes, use the following command:
+
+```bash
+gulp watch
+```
+
+If you have any questions, please don't hesitate to ask!
+
+Supports the latest version of Ghost on IE10+, Firefox, Chrome, Safari

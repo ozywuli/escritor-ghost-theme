@@ -36,7 +36,7 @@
   &:hover {
     box-shadow: 0 1px 6px rgba(50, 50, 50, 0.5);
   }
-  .post-template &:hover {
+  .post-template .content &:hover {
     box-shadow: 0 1px 2px rgba(50, 50, 50, 0.5);
   }
 
@@ -45,6 +45,11 @@
   .post__anchor {
     display: block;
     padding: 20px;
+    color: #333;
+
+    &:hover {
+      color: #333;
+    }
     
     @include respond-to(small) {
       padding: 40px;
@@ -69,7 +74,7 @@
     color: #9EABB3;
 
     .post-template & {
-      margin-bottom: 15px;
+      margin-bottom: 25px;
     }
   }
 
@@ -130,7 +135,9 @@
       margin: 2rem 0 2rem -2.2rem;
       padding: 0 0 0 2rem;
       border-left: #4A4A4A 0.2rem solid;
+      @include font-size($h4-font-sizes);
       font-style: italic;
+      font-weight: bold;
     }
 
     pre {
@@ -139,6 +146,10 @@
 
   }
 
+
+.tags {
+  margin-top: 40px;
+}
 
 
 .author-thumb {

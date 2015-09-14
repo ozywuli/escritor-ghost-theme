@@ -15,17 +15,21 @@
         <header class="post__header">
             <h2 class="post__title">{{title}}</h2>
             <section class="post__meta">
-                <time class="post__date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                <time class="post__date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
             </section>
         </header>
 
+{{#if image}}
         <img src="{{image}}" alt="" class="post__img">
+{{/if}}
 
         <section class="post__content">
             {{content}}
         </section>
 
-
+<div class="tags">
+{{tags separator=", " prefix="Tagged in: "}}
+</div>
 
         <section class="share">
 
