@@ -64,6 +64,15 @@
       @include font-size($h2-font-sizes);
       line-height: 1;
     }
+
+
+    .featured &:before {
+    content: 'Featured';
+    display: block;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+    }
   }
 
   .post__meta {

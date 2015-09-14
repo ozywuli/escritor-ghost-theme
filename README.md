@@ -25,14 +25,21 @@ You'll need node, npm, and gulp installed
 
 After which you should follow instructions below:
 
+Clone the repository into the themes folder located in your local ghost installation
 ```bash
-// clone the repository into your local folder
 git clone https://github.com/ozywuli/wordsmith-ghost-theme
-// navigate to the cloned repository
+```
+
+Navigate to the cloned repository
+```bash
 cd wordsmith-ghost-theme
-// install the necessary gulp plugins
+```
+Install the necessary gulp plugins
+```bash
 npm install del gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-uglify gulp-imagemin gulp-rename gulp-concat gulp-notify gulp-cache gulp-livereload del gulp-plumber gulp-combine-media-queries --save-dev
-// build the theme
+```
+Build the theme
+```bash
 gulp
 ```
 

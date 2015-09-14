@@ -1136,6 +1136,13 @@ pre[class*="language-"] {
     font-size: 6rem;
   }
 }
+.featured .post__title:before {
+  content: 'Featured';
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
 
 .post__meta {
   display: block;
@@ -1348,7 +1355,7 @@ pre[class*="language-"] {
 .inner-author__box {
   max-width: 600px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 20px;
 }
 
 .vertical {
@@ -1415,4 +1422,8 @@ pre[class*="language-"] {
     display: inline-block;
     margin-right: 15px;
   }
+}
+
+.page-template .post__title {
+  margin-bottom: 40px;
 }
