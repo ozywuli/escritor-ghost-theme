@@ -2,7 +2,7 @@
 
 # Wordsmith - a theme for [Ghost](http://github.com/tryghost/ghost)
 
-[DEMO](http://wordsmith.ozywuli.com)
+**[DEMO](http://wordsmith.ozywuli.com)**
 
 Wordsmith is a modern and elegant theme for sharing your thoughts, stories, and ideas.
 
