@@ -29,12 +29,12 @@ After which you should follow instructions below:
 
 Clone the repository into the themes folder located in your local ghost installation
 ```bash
-git clone https://github.com/ozywuli/Escritor-ghost-theme
+git clone https://github.com/ozywuli/escritor-ghost-theme
 ```
 
 Navigate to the cloned repository
 ```bash
-cd Escritor-ghost-theme
+cd escritor-ghost-theme
 ```
 Install the necessary gulp plugins
 ```bash
