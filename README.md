@@ -1,10 +1,10 @@
 ![Ghost Compatability](http://img.shields.io/badge/Compatible%20with%20Ghost-v0.7.x-brightgreen.svg)
 
-# Wordsmith - a theme for [Ghost](http://github.com/tryghost/ghost)
+# Escritor - a theme for [Ghost](http://github.com/tryghost/ghost)
 
 **[DEMO](http://wordsmith.ozywuli.com)**
 
-Wordsmith is a modern and elegant theme for sharing your thoughts, stories, and ideas.
+Escritor is a modern and elegant theme for sharing your thoughts, stories, and ideas.
 
 If you find any bugs, want to request any features, or have any other advice for improving this theme, please open an issue or make a pull request. Your help is much appreciated!
 
@@ -29,12 +29,12 @@ After which you should follow instructions below:
 
 Clone the repository into the themes folder located in your local ghost installation
 ```bash
-git clone https://github.com/ozywuli/wordsmith-ghost-theme
+git clone https://github.com/ozywuli/Escritor-ghost-theme
 ```
 
 Navigate to the cloned repository
 ```bash
-cd wordsmith-ghost-theme
+cd Escritor-ghost-theme
 ```
 Install the necessary gulp plugins
 ```bash
